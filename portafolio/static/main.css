@@ -1,0 +1,44 @@
+body {
+    background: #090909;
+}
+
+#foto {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+#imagen_proyecto{
+    height: 182px;
+    width: 100%;
+}
+
+.card-project:hover{
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: 1000ms;
+}
+
+.lang-icon {
+    transition: opacity 1000ms;
+}
+
+.lang-icon:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.texto1{
+    transition: 500ms;
+}
+
+.texto1:hover{
+    opacity: 0.3;
+    transition: 1000ms;
+}

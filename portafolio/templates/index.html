@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<header class="row bg-black">
+    <div class="col md-4">
+        <img src="{% static 'contenido/linkedin.jpg' %}" alt="Profile Photo" id="foto">
+    </div>
+    <div class="col md-8 my-auto p-4">
+        <h2>¡Hola! Me llamo <strong>Carlos Rodríguez</strong></h2>
+        <p>
+            <img src="{% static 'contenido/icono-colombia.png' %}" alt="Colombia" class="bandera"> <strong> Colombia, Barranquilla.</strong>
+        </p>
+        <h3>Soy Desarrollador en Python</h3>
+        <p>Soy Técnico en Programación de Software, orientado al <strong>Back-End</strong><br>Estas son las tecnologías que manejo: <br>
+            <div class="mt-2" id="lenguajes">
+                <img class="lang-icon" src="{% static 'contenido/icono-html.svg' %}" alt="HTML">
+                <img class="lang-icon" src="{% static 'contenido/icono-css.svg' %}" alt="CSS">
+                <img class="lang-icon" src="{% static 'contenido/icono-javascript.svg' %}" alt="JavaScript">
+                <img class="lang-icon" src="{% static 'contenido/icono-python.svg' %}" alt="Python">
+                <img class="lang-icon" src="{% static 'contenido/icono-flask.svg' %}" alt="Flask">
+                <img class="lang-icon" src="{% static 'contenido/icono-django.svg' %}" alt="Django">
+                <img class="lang-icon" src="{% static 'contenido/icono-mysql.svg' %}" alt="MySQL">
+                <img class="lang-icon" src="{% static 'contenido/icono-git.svg' %}" alt="GIT">
+                <img class="lang-icon" src="{% static 'contenido/icono-github.svg' %}" alt="GitHub">
+            </div>
+        </p>
+        <p>Estoy en busqueda de oportunidades laborales, acá te dejo mi CV para que contactemos!</p>
+        <a href="{% static 'contenido/cv-carlos-rodriguez.pdf' %}" target="_blank" class="btn btn-primary btn-lg rounded-5 my-3">Descargar CV</a>
+    </div>
+</header>
+
+    <div class="row my-4 text-center">
+        <h3 class="texto1">Mis proyectos</h3>
+        <p>¡Estos son mis proyectos personales!</p>
+
+
+        {% for i in projects %}
+            <div class="col-md-4 p-4">
+                <div class="card bg-black card-project">
+                    <img src="{{i.image.url}}" alt="{{i.title}}" class="card-img-top" id="imagen_proyecto">
+                    <div class="card-body">
+                        <h2>{{i.title}}</h2>
+                        <p>{{i.description}}</p>
+                        {% if i.url %}
+                            <a href="{{i.url}}" target="_blank" class="btn btn-light btn-sm">Ver proyecto</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

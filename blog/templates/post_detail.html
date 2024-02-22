@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <img src="{{post.image.url}}" alt="{{post.title}}" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+        <h2>{{post.title}}</h2>
+        <h3 class="my-2 h5 text-muted">{{post.date}}</h3>
+        <div class="my-4">
+            <p>{{post.description|safe}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
