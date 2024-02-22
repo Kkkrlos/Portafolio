@@ -19,6 +19,10 @@ body {
     width: 100%;
 }
 
+.card-project{
+    transition: 1s;
+}
+
 .card-project:hover{
     border: 1px solid #fff;
     cursor: pointer;
@@ -41,4 +45,15 @@ body {
 .texto1:hover{
     opacity: 0.3;
     transition: 1000ms;
+}
+
+@media (min-width: 300px) and (max-width: 950px) {
+    #navbarNav .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #navbarNav .nav-item {
+        margin-right: 8px;
+    }
 }
