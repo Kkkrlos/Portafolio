@@ -1,12 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
     background: #090909;
+}
+
+header {
+    text-wrap: nowrap;
 }
 
 #foto {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 50px 10px;
     border-radius: 50%;
 }
 
@@ -21,6 +31,7 @@ body {
 
 .card-project{
     transition: 1s;
+    text-wrap: balance;
 }
 
 .card-project:hover{

@@ -11,7 +11,7 @@
     <div class="col md-8 my-auto p-4">
         <h2>¡Hola! Me llamo <strong>Carlos Rodríguez</strong></h2>
         <p>
-            <img src="{% static 'contenido/icono-colombia.png' %}" alt="Colombia" class="bandera"> <strong> Colombia, Barranquilla.</strong>
+            <img src="{% static 'contenido/icono-colombia.png' %}" alt="Colombia" class="bandera">  Colombia, Barranquilla.
         </p>
         <h3>Soy Desarrollador en Python</h3>
         <p>Soy Técnico en Programación de Software, orientado al <strong>Back-End</strong><br>Estas son las tecnologías que manejo: <br>
@@ -43,7 +43,7 @@
                     <img src="{{i.image.url}}" alt="{{i.title}}" class="card-img-top" id="imagen_proyecto">
                     <div class="card-body">
                         <h2>{{i.title}}</h2>
-                        <p>{{i.description}}</p>
+                        <p>{{i.description|truncatechars:65|safe}}</p>
                         {% if i.url %}
                             <a href="{{i.url}}" target="_blank" class="btn btn-light btn-sm">Ver proyecto</a>
                         {% endif %}
