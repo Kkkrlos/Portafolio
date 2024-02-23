@@ -59,6 +59,11 @@ header {
 }
 
 @media (min-width: 300px) and (max-width: 950px) {
+
+    * {
+        text-wrap: balance;
+    }
+
     #navbarNav .navbar-nav {
         display: flex;
         flex-direction: row;
