@@ -72,4 +72,19 @@ header {
     #navbarNav .nav-item {
         margin-right: 8px;
     }
+
+    .row.bg-black {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col.md-4 {
+        width: 90%;
+        margin-bottom: 5px;
+    }
+
+    .col.md-8 {
+        width: 100%;
+        text-align: center;
+    }
 }
