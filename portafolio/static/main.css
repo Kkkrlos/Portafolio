@@ -58,6 +58,17 @@ header {
     transition: 1000ms;
 }
 
+.header-hover{
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.header-hover:hover{
+    border-color: rgb(87, 84, 84);
+    transition: 1s;
+}
+
 @media (min-width: 300px) and (max-width: 950px) {
 
     * {
@@ -86,5 +97,19 @@ header {
     .col.md-8 {
         width: 100%;
         text-align: center;
+    }
+
+    .card.row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card .col-md-3 {
+        order: 1;
+    }
+
+    .card .col-md-9 {
+        order: 2;
+        margin-top: 10px;
     }
 }
