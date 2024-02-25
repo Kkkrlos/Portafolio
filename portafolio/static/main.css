@@ -69,6 +69,10 @@ header {
     transition: 1s;
 }
 
+form.form-control.bg-black {
+    border: none;
+}
+
 @media (min-width: 300px) and (max-width: 950px) {
 
     * {
@@ -81,7 +85,7 @@ header {
         align-items: center;
     }
     #navbarNav .nav-item {
-        margin-right: 8px;
+        margin-right: 4px;
     }
 
     .row.bg-black {

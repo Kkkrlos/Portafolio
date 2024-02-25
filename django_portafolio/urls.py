@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="home"),
     path('blog/', include('blog.urls')),
+    path('contacto/', views.contact, name='contacto'),
     path('https://www.linkedin.com/in/carlosrodriguez1205/', views.Linkedin, name="Linkedin"),
     path('https://github.com/Kkkrlos', views.Github, name="Github")
 ]
