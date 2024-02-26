@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage
-from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib import messages
+from django.template.loader import get_template
 from .models import Project
 
 def index(request):
@@ -23,18 +23,19 @@ def contact(request):
         subject = request.POST['subject']
         message = request.POST['message']
 
-        template = render_to_string('email/email_template.html', {
-            'name': name,
-            'email': email,
-            'message': message
-        })
+        # Obtener plantilla a renderizar
+        email_template = get_template('email/email_template.html')
+
+        # Renderiza la plantilla con los datos del formulario
+        template_content = email_template.render({'name': name, 'email': email, 'message': message})
 
         email = EmailMessage(
             subject,
-            template,
+            template_content,
             settings.EMAIL_HOST_USER,
             ['rocarlos1205@gmail.com']
         )
+        email.content_subtype = 'html'
 
         email.fail_silently = False
         email.send()
