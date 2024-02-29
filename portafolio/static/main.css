@@ -117,3 +117,23 @@ form.form-control.bg-black {
         margin-top: 10px;
     }
 }
+
+@media (max-width: 375px) {
+    .navbar-toggler:not(.collapsed) + .navbar-collapse {
+        flex-basis: 100%;
+        flex-direction: column;
+        height: auto;
+        max-height: 50vh;
+        overflow-y: auto;
+    }
+
+    #navbarNav {
+        width: 100%;
+    }
+
+    #navbarNav .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}

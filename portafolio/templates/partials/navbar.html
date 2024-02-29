@@ -9,13 +9,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto"> 
             <li class="nav-item">
-                <a class="nav-link fs-5" href="{% url 'blog:posts' %}">Blog</a>
+                <a class="nav-link fs-5" href="{% url 'blog:posts' %}">Blog <i class="fa-brands fa-microblog"></i></a>
             </li>
             <li class="nav-item d-flex align-items-center">
-                <a class="mx-2" style="text-decoration: none; color: rgb(151, 146, 146);" href="{% static 'contenido/cv-carlos-rodriguez.pdf' %}" target="_blank">Descargar CV</a>
+                <a class="mx-2 nav-link fs-5" style="text-decoration: none; color: rgb(151, 146, 146);" href="{% static 'contenido/cv-carlos-rodriguez.pdf' %}" target="_blank">Descargar CV <i class="fa-solid fa-download"></i></a>
             </li>
-            <li class="nav-item d-flex align-items-center mx-2">
-                <a href="{% url 'contacto' %}" style="text-decoration: none; color: rgb(151, 146, 146);">Contacto</a>
+            <li class="nav-item d-flex align-items-center">
+                <a class="mx-2 nav-link fs-5" href="{% url 'contacto' %}" style="text-decoration: none; color: rgb(151, 146, 146);">Contacto <i class="fa-regular fa-address-card"></i></a>
             </li>
             <li class="nav-item">
                 <a href="{% url 'Linkedin' %}" target="_blank" class="mx-2"><img src="{% static 'contenido/icono-linkedin.svg' %}" alt=""></a>
